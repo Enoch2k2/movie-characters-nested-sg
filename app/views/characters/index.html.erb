@@ -1,0 +1,11 @@
+<% if @movie %>
+  <h1><%= @movie.title %> Characters</h1>
+<% else %>
+  <h1>All Characters</h1>
+<% end %>
+
+<ul>
+  <% @characters.each do |character| %>
+    <li><%= link_to character.name, movie_character_path(@movie, character) %></li>
+  <% end %>
+</ul>

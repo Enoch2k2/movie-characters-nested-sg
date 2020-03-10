@@ -1,0 +1,18 @@
+<h1>Create Character for <%= @movie.title %></h1>
+
+<%= form_for([@movie, @character]) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :race %>
+    <%= f.text_field :race %>
+  </div>
+  <div>
+    <%= f.label :gender %>
+    <%= f.text_field :gender %>
+  </div>
+
+  <%= f.submit "Create Character" %>
+<% end %>
